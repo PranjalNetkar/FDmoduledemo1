@@ -1,0 +1,119 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "RDCalculator";
+}
+<h2>Recurring Deposit </h2>
+<p class="">This RD Calculator helps you calculate the maturity amount and interest earned for any <em>Recurring Deposit</em> account.</p>
+<br />
+
+<p>
+    Your RD Invest amount is Rs.@ViewBag.PrincipleAmount <br />
+    Maturity Amount will be Rs. @ViewBag.MaturityAmount <br />
+    After @ViewBag.time Months <br />
+    Interest will be RS. @ViewBag.InterestAmount<br />
+    at rate of interest @ViewBag.RateOfInterest (%)
+</p>
+<div class="row">
+    <div class="col-md-9" id="results-wrapper">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Months</th>
+                    <th> Monthly Deposit(&#8377;)</th>
+                    <th>Interest Earned (&#8377;)</th>
+                    <th>Closing Balance (&#8377;)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> @ViewBag.time </td>
+                    <td> @ViewBag.PrincipleAmount </td>
+                    <td> @ViewBag.InterestAmount </td>
+                    <td> @ViewBag.MaturityAmount </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>
+
+</div>
+<div class="row">
+    <div class="col-sm-7">
+        <br>
+        <p>
+            <strong>
+                The amount mentioned in the calculator is an indicative figure . Please refer the FD/ RD advice to get the exact maturity amount
+            </strong>
+        <p>
+            Are you looking for an investment opportunity where you can make regular savings and earn interest?
+            A Recurring Deposit (RD) may be the answer for you.
+            You can make small contributions at regular intervals and get rewarded with interest on your savings.
+            <br />
+            We at CDB Bank strive to provide you with the best facilities for all your financial needs at your convenience.
+            It is our pleasure to introduce our RD Calculator—a tool for all your answers about an RD.
+            <br />
+            Use our custom-made Recurring Deposit calculator to plan your investment better.
+            With our online RD calculator, you can learn all about interest rates, and the sum you stand to gain for your savings.
+            To get started, choose the tenure of your saving and enter the principal amount you intend to deposit every month in that period.
+            No need to calculate your maturity sum, our RD interest rates calculator will do it for you.
+            <br />
+            New to saving and want to start small? You can set aside a small part of your income as savings
+            and earn attractive interest on it every month. Lock in interest rate for the entire tenure and get safe and guaranteed
+            returns without fearing about the market fluctuations.Opt for an RD account. You can start with an amount as low as Rs1000.
+            With our online RD calculator, get your interest rate and maturity sum in an instant.
+            <br />
+            You can tweak your tenure between six months and ten years to see which plan works the best for you.
+            With CDB Bank RD accounts, you can enjoy interest rates similar to fixed deposits even with smaller investments. The interest you earn will be paid on maturity. Use our RD maturity calculator to find out what you stand to gain by investing in a Recurring Deposit.
+        </p>
+    </div>
+    <div>
+
+    </div>
+    <div class="col-sm-5">
+        <div class="social-share-buttons">
+            <span class="social-btn share-text"><strong>Share on</strong></span>
+            <span class="social-btn twitter-btn">
+                <a href="https://twitter.com/share?url=https://fd-calculator.in&text=Fixed Deposit Calculator" target="_blank">Twitter</a>
+            </span>
+            <span class="social-btn facebook-btn">
+                <a href="http://www.facebook.com/sharer.php?u=https://fd-calculator.in" target="_blank">Facebook</a>
+            </span>
+        </div>
+
+        <h2>RD Interest</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Bank</th>
+                    <th>Interest Rates</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SBI</td>
+                    <td>6.50%</td>
+                </tr>
+                <tr>
+                    <td>ICICI </td>
+                    <td>6.75%</td>
+                </tr>
+                <tr>
+                    <td>HDFC</td>
+                    <td>6.80%</td>
+                </tr>
+                <tr>
+                    <td>PNB </td>
+                    <td>6.90%</td>
+                </tr>
+                <tr>
+                    <td>Axis </td>
+                    <td>7.0%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

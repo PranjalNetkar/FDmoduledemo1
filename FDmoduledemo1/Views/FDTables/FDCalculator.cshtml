@@ -1,0 +1,125 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "FDCalculator";
+}
+<div>
+    <div>
+        <h1>Fixed Deposit Calculator</h1>
+        <p class="">This FD Calculator helps you calculate the maturity amount and interest earned for any <em>Fixed Deposit</em> account.</p>
+    </div>
+    <div>
+        <p>
+            Your FD Invest amount is Rs.@ViewBag.PrincipleAmount <br />
+            Maturity Amount will be Rs. @ViewBag.MaturityAmount <br />
+            After @ViewBag.time years <br />
+            Interest will be RS. @ViewBag.InterestAmount<br />
+            at rate of interest @ViewBag.RateOfInterest (%)
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-9" id="results-wrapper">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Opening Balance (&#8377;)</th>
+                    <th>Interest Earned (&#8377;)</th>
+                    <th>Closing Balance (&#8377;)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> @ViewBag.time </td>
+                    <td> @ViewBag.PrincipleAmount </td>
+                    <td> @ViewBag.InterestAmount </td>
+                    <td> @ViewBag.MaturityAmount </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-7">
+        <br>
+        <p>
+            <strong>Fixed Deposit</strong> is a kind of <em>Term Deposit</em> with higher interest rate (as compared to regular savings account)
+            and because of high interest rate and low risk, it's quite a popular investment choice in India.
+            The interest rate is fixed for the whole maturity period and, it's usually considered as an extremely safe investment.
+        </p>
+        <p>
+            You also need to pay taxes on the interest earned during a financial year,
+            depending on your tax bracket. For long term need, you
+            could also look for some alternatives like PPF (very safe and it has tax benefit as well) and SIP (investing in
+            equity asset is risky but it has potential to generate higher returns in long term).
+        </p>
+
+        <h3>Benefits and Limitations of FD</h3>
+
+        <h4>Pros</h4>
+        <ul>
+            <li>FD is very safe</li>
+            <li>Stable and predicted returns (e.g 7% p.a)</li>
+            <li>Well suitable for conservative investors</li>
+        </ul>
+
+        <h4>Cons</h4>
+        <ul>
+            <li>FD has low liquidity (you'll earn less interest in case of premature withdrawal)</li>
+            <li>
+                Low returns, when you take inflation in account, actual returns are lower.
+                It will further reduced because of taxes (especially if you're in 30% tax brackets)
+            </li>
+            <li>
+                Not suitable for long term wealth creation or the investors with high risk appetite
+                (e.g young investors in their 20s or 30s)
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-5">
+        <div class="social-share-buttons">
+            <span class="social-btn share-text"><strong>Share on</strong></span>
+            <span class="social-btn twitter-btn">
+                <a href="https://twitter.com/share?url=https://fd-calculator.in&text=Fixed Deposit Calculator" target="_blank">Twitter</a>
+            </span>
+            <span class="social-btn facebook-btn">
+                <a href="http://www.facebook.com/sharer.php?u=https://fd-calculator.in" target="_blank">Facebook</a>
+            </span>
+        </div>
+
+        <h2>FD Interest</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Bank</th>
+                    <th>Interest Rates</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SBI</td>
+                    <td>6.50%</td>
+                </tr>
+                <tr>
+                    <td>ICICI </td>
+                    <td>6.75%</td>
+                </tr>
+                <tr>
+                    <td>HDFC</td>
+                    <td>6.80%</td>
+                </tr>
+                <tr>
+                    <td>PNB </td>
+                    <td>6.90%</td>
+                </tr>
+                <tr>
+                    <td>Axis </td>
+                    <td>7.0%</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Check <a href="/interest-rates">FD interest rates </a> for other banks.</p>
+    </div>
+</div>
