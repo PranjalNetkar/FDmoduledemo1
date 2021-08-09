@@ -90,7 +90,9 @@ namespace FDmoduledemo1.Controllers
                     double z = Math.Pow(x, y);
                     fD.FdMAmount = P * z;
                 }
-
+                DateTime date = DateTime.Now.AddYears(v);
+                string Date = String.Format("{0:M/d/yyyy}", date);
+                HttpContext.Session.SetString("date", Date);
 
                 fD.FdInMoney = fD.FdMAmount - P;
                 int conamount = (int)fD.FdMAmount;
@@ -115,6 +117,7 @@ namespace FDmoduledemo1.Controllers
 
         public IActionResult FDSuccess()
         {
+            ViewBag.Date = HttpContext.Session.GetString("date");
             ViewBag.MaturityAmount = HttpContext.Session.GetInt32("MAmount");
             ViewBag.InterestAmount = HttpContext.Session.GetInt32("InterestOnFd");
             ViewBag.time = HttpContext.Session.GetInt32("Tenure");
@@ -176,6 +179,9 @@ namespace FDmoduledemo1.Controllers
                 int v = (int)t;
                 HttpContext.Session.SetInt32("Tenure", v);
                 double rateinper = 100 * r;
+                DateTime date = DateTime.Now.AddYears(v);
+                string Date = String.Format("{0:M/d/yyyy}", date);
+                HttpContext.Session.SetString("date", Date);
                 string Interest = Convert.ToString(rateinper);
                 HttpContext.Session.SetString("RateInterest", Interest);
 
@@ -192,6 +198,7 @@ namespace FDmoduledemo1.Controllers
         }
         public IActionResult FDCalculator()
         {
+            ViewBag.Date = HttpContext.Session.GetString("date");
             ViewBag.MaturityAmount = HttpContext.Session.GetInt32("MAmount");
             ViewBag.InterestAmount = HttpContext.Session.GetInt32("InterestOnFd");
             ViewBag.time = HttpContext.Session.GetInt32("Tenure");
