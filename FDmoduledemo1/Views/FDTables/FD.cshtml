@@ -62,36 +62,6 @@
     </div>
 </body>
 </html>
-=======
-
-<h1>FD</h1>
-
-<h4>FDTable</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="FD">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="FdInvMon" class="control-label"></label>
-                <input asp-for="FdInvMon" class="form-control" />
-                <span asp-validation-for="FdInvMon" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Month" class="control-label"></label>
-                <input asp-for="Month" class="form-control" />
-                <span asp-validation-for="Month" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 
 @section Scripts {
