@@ -104,6 +104,9 @@ namespace FDmoduledemo1.Controllers
                     double z = Math.Pow(x, y);
                     rD.FdMAmount = P * z * t;
                 }
+                DateTime date = DateTime.Now.AddMonths(v);
+                string Date = String.Format("{0:M/d/yyyy}", date);
+                HttpContext.Session.SetString("date", Date);
 
                 rD.FdInMoney = rD.FdMAmount - (P * t);
                 int conamount = (int)rD.FdMAmount;
@@ -125,6 +128,8 @@ namespace FDmoduledemo1.Controllers
         }
         public IActionResult RDSuccess()
         {
+        
+            ViewBag.Date = HttpContext.Session.GetString("date");
             ViewBag.MaturityAmount = HttpContext.Session.GetInt32("MaturityAmount");
             ViewBag.InterestAmount = HttpContext.Session.GetInt32("InterestOnRd");
             ViewBag.time = HttpContext.Session.GetInt32("Duration");
